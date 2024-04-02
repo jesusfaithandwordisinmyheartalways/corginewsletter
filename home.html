@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+  integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" 
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    
+    <script defer src="/js/home.js"></script>
+    <link rel="stylesheet" href="/css/wildlife.css">
+    <title>Corgi Discover Home</title>
+</head>
+
+
+
+<body onload="document.formLogin.username.focus()">
+
+
+<navbar class="navbar-container" id="navbar-container">
+
+    <a>Home</a>
+  <div class="About-Section" >
+    <a href="">About</a>
+    <div class="Navbar-About-List" id="About-List">
+        <a href="/about.html" target="_self">History of Corgis</a>
+         <a href="/important.html" target="_self">Why Corgis Are Important</a>
+    </div>
+  </div>
+   
+   
+    <a href="/contact.html" target="_self">Contact</a>
+  
+
+
+</navbar>
+
+
+
+
+
+<main class="Grid-Content">
+
+ <div class="Content-Background">
+    
+ </div>
+
+
+  <form method="GET" action="about.html" class="form-container" id="form-container" name="formLogin">
+    <div class="form-header">
+        <h2>Sign Up for Corgi Newsletters</h2>
+    </div>
+      <div class="label-container">
+            <label for="username">Username</label>
+            <label for="password">Password</label>
+            <label for="confirm-password">Confirm Password</label>
+            <label for="email">Email</label>
+        </div>
+
+   <div class="User-input" id="User-input">
+      <input onkeyup="userLogin()" type="text" class="username" id="username" name="username" placeholder="Username" autocomplete="off"> 
+       <span class="username-err" id="username-err" name="user-name-error"><ion-icon class="username-err-icon" name="alert"></ion-icon>Please enter Uppercase & lowercase letter, one number, & one  character not alphanumeric</span>
+      <input type="password" class="user-pswrd" id="user-pswrd" name="user-pswrd" placeholder="Password" autocomplete="off">
+      <ion-icon class="eye-icon" id="eye-icon" name="eye-off"></ion-icon> 
+      <ion-icon class="eye-icon-open" id="eye-icon-open" name="eye"></ion-icon>
+      <span class="paswrd-error" id="paswrd-error" name="paswrd-error"><ion-icon class="passwrd-error-icon" id="passwrd-error-icon" name="compass"></ion-icon>Please enter Uppercase & lowercase letter, 6 characters +, & least one number</span>
+      <input oninput="userConfirmPassword()" type="password" class="confirm-pswrd" id="confirm-pswrd" name="confirm-user-passwrd" placeholder="Re-Enter Password" autocomplete="off">
+      <span class="confirm-passwrd-error" id="confirm-passwrd-error" name="confirm-passwrd-error"><ion-icon class="confirm-passwrd-icon" id="confirm-paswrd-icon" name="mail"></ion-icon>Please Re-Enter The Same Password</span>
+      <span class="passwords-match" id="passwords-match" name="password-match"><ion-icon class="password-match-icon" id="password-match-icon" name="checkmark-circle"></ion-icon>Password Accepted!</span>
+      <input onkeyup="userEmailLogin()" type="email" class="user-email" id="user-email" name="user-email" placeholder="Email" autocomplete="off">  
+      <span class="email-error" id="email-error" name="email-error"><ion-icon class="email-icon" id="email-icon" name="mail"></ion-icon>Please enter an valid Email Address</span>
+    </div>
+
+
+    <div onclick="return passUser()" class="User-Btn" id="User-Btn">
+        <button  type="submit" class="btn" id="btn">Receive Updates</button>
+    </div>
+
+
+  </form>
+
+    
+</main>
+
+
+
+
+
+
+
+<!---------------------------------------------------------POPUP SECTION -------------------------------------------------------------------------------------->
+
+
+
+<aside id="pop-up">
+    <div class="Popup-Section" id="Popup-Section">
+        <ion-icon class="check-popup-icon" id="check-popup-icon" name="checkmark-circle"></ion-icon>
+        <h2>Thank You!</h2>
+        <p>Your details have been successfully submitted!</p>
+        <p>Check your email. You will receive instructions on important updates</p>
+        <button onclick="closePopUp()" class="btn-popup" id="btn-popup" >OK</button>
+    </div>
+
+</aside>
+
+
+<!-------------------------------------------------------------END OF POPUP SECTION --------------------------------------------------------------------------------->
+
+
+
+
+
+
+
+
+
+
+
+<!-----------------------------------------FOOTER----------------------------------------------->
+
+
+<footer class="footer-sec" id="footer-sec">
+    
+
+    <div class="footer-corgi">
+        <div class="corgi-footer">Corgi Discover Foundation</div>
+    </div>
+
+    <div class="footer-left-side-text">
+        <div class="footer-text">We take passion to unfold the true history of corgis worldwide</div>
+    </div>
+
+    <div class="footer-corgi-image">
+        <div class="footer-corgi-image-wrapper"></div>
+    </div>
+
+    <div class="footer-section">
+        <a href="">Discover Us</a>
+        <a href="">Get Involved</a>
+    </div>
+
+    <div class="footer-social-media">
+        <a href=""><ion-icon class="social-media-icons" name="logo-instagram"></ion-icon>Instagram</a>
+        <a href=""><ion-icon class="social-media-icons" name="logo-facebook"></ion-icon>Facebook</a>
+        <a href=""><ion-icon class="social-media-icons" name="logo-youtube"></ion-icon>YouTube</a>
+        <a href=""><ion-icon class="social-media-icons" name="logo-twitter"></ion-icon>Twitter</a>
+    </div>
+
+    <div class="footer-help-section">
+        <a href=""><ion-icon class="help-icons" name="school"></ion-icon>Assist The Corgi Community</a>
+        <a href=""><ion-icon class="help-icons" name="globe"></ion-icon>Stay Connected</a>
+    </div>
+
+
+
+
+
+</footer>
+
+
+<!-----------------------------------------END OF FOOTER SECTION ----------------------------------------------->
+
+
+
+<footer class="Corgi-Headlines-Section">
+
+    <div class="corgi-header-discover">© The Corgi Discovery Foundation 2024 is Sponsored by British Airlines</div>
+
+</footer>
+
+
+
+
+
+
+<script>
+</script>
+
+
+
+
+
+    
+</body>
+</html>

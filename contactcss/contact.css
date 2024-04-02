@@ -1,0 +1,255 @@
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Pacifico&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Doodle+Triangles&display=swap');
+
+
+
+:root {
+    --white:white;
+    --whitesmoke:whitesmoke;
+    --green: green;
+    --black: black;
+    --gray: gray;
+    --coral:coral;
+    --fontSize: 1rem;
+    --skyBlue:skyblue
+}
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+
+body {
+    margin:0
+}
+
+
+
+
+.navbar-container {
+    display: flex;
+    position: fixed;
+    top:0%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width:100%;
+    height:60px;
+    text-align: center;
+    background:linear-gradient(skyblue, white);
+    z-index: 99;
+
+}
+
+.navbar-container a {
+    color:coral;
+    font-size: var(--fontSize);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    padding:1em 3em;
+    cursor: pointer;
+    width:100vw;
+    transition: 1s linear;
+
+}
+
+.navbar-container a:hover {
+    transition: 1s linear;
+    color:var(--white)
+    
+}
+
+
+.Navbar-About-List {
+    position: absolute;
+    display:none;
+    height:117px;
+    width: 209px;
+    text-align: center;
+    top:90%;
+    left: 43%;
+    border-radius:6px;
+    background-image:linear-gradient(skyblue, white, black)
+}
+
+
+.Navbar-About-List a {
+    display: block;
+    color:var(--black);
+    font-size: 0.7rem;
+    width:100%;
+    padding:2em 2em;
+    font-family: "Protest Revolution", sans-serif;
+}
+
+.Navbar-About-List a:hover {
+    background-color:var(--coral)
+}
+
+
+.navbar-container:hover .About-Section:hover .Navbar-About-List {
+    display: block;
+}
+
+
+
+
+
+
+.Header-Content-Container  {
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: center;
+    width: 220px;
+  
+    top:-3%;
+    left:40%;
+    position: absolute;
+    font-family: "Protest Revolution", sans-serif;
+    font-size: 1.3rem;
+}
+
+
+
+
+
+
+.Contact-Form {
+    position: absolute;
+    border:2px solid black;
+    height: 580px;
+    width:860px;
+    top:36%;
+    left:20%
+}
+
+.Contact-Flex-Container {
+    display: flex;
+    flex-direction: column;
+    gap:50px 0px;
+    position: absolute;
+    width:110px;
+    height:110px;
+    top:15%;
+    left:20%
+}
+
+
+.User-Flex-Container {
+    display: flex;
+    flex-direction: column;
+    gap:45px 0px;
+    position: absolute;
+    width:310px;
+    height:110px;
+    top:14%;
+    left: 35%;
+}
+
+
+.User-Flex-Container input {
+    font-size: 0.8rem;
+    width:100%;
+    border-radius:3px;
+    text-align: center;
+    padding:.2em 2.8em;
+}
+
+.User-Flex-Container input:focus ,
+.User-Flex-Container textarea{
+    outline: 3px solid skyblue
+}
+
+.User-Flex-Container input:valid {
+    border: 3px solid var(--green)
+}
+
+
+
+.User-Flex-Container .contact-text {
+    font-size: 0.8rem;
+    border-radius:3px;
+    resize: none;
+}
+
+
+span.contact-name-err {
+    position: absolute;
+    visibility: hidden;
+    top:0%;
+    left: 120%;
+    font-size: 0.9rem;
+    font-family: Arial, Helvetica, sans-serif;
+    width:210px;
+    color:var(--green);
+    transition: 1.9s visibility linear;
+}
+
+
+
+span.contact-phone-err {
+    position: absolute;
+    visibility: hidden;
+    top:65%;
+    left: 120%;
+    font-size: 0.9rem;
+    font-family: Arial, Helvetica, sans-serif;
+    width:210px;
+    color:var(--green)
+}
+
+
+
+
+span.contact-email-err {
+    position: absolute;
+    visibility: hidden;
+    top:130%;
+    left: 120%;
+    font-size: 0.9rem;
+    font-family: Arial, Helvetica, sans-serif;
+    width:210px;
+    color:var(--green)
+}
+
+span.contact-text-err {
+    position: absolute;
+    top:195%;
+    left: 115%;
+    font-size: 0.9rem;
+    font-family: Arial, Helvetica, sans-serif;
+    width:210px;
+    color:var(--green)
+
+}
+
+
+
+
+
+.btn-submit {
+    background-image:linear-gradient(skyblue, white, black);
+    color:var(--coral);
+    font-size: 1rem;
+    font-family: "Protest Revolution", sans-serif;
+    border:none;
+    padding:1em 1em;
+    cursor: pointer;
+}
+
+
+.btn-submit:hover {
+    color:var(--black);
+    background-image:linear-gradient(coral, white, skyblue)
+}

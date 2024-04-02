@@ -1,0 +1,855 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap');
+
+
+
+
+
+
+:root {
+    --white:white;
+    --whitesmoke:whitesmoke;
+    --green: green;
+    --black: black;
+    --gray: gray;
+    --coral:coral;
+    --fontSize: 1rem;
+}
+
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+body {
+    height:776px;
+    margin:0;
+    overflow-x: hidden;
+   
+  
+}
+
+
+
+ .navbar-container {
+    display: flex;
+    position: fixed;
+    top:0%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width:100%;
+    height:60px;
+    text-align: center;
+    background:linear-gradient(skyblue, white);
+    z-index: 99;
+
+}
+
+.navbar-container a {
+    color:coral;
+    font-size: var(--fontSize);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    padding:1em 3em;
+    cursor: pointer;
+    width:100vw;
+    transition: 1s linear;
+
+}
+
+.navbar-container a:hover {
+    transition: 1s linear;
+    color:var(--white)
+    
+}
+
+
+
+
+
+.Navbar-About-List {
+    position: absolute;
+    display:none;
+    height:117px;
+    width: 209px;
+    text-align: center;
+    top:90%;
+    left: 43%;
+    border-radius:6px;
+    background-image:linear-gradient(skyblue, white, black)
+}
+
+
+.Navbar-About-List a {
+    display: block;
+    color:var(--black);
+    font-size: 0.7rem;
+    width:100%;
+    padding:2em 2em;
+    font-family: "Protest Revolution", sans-serif;
+}
+
+.Navbar-About-List a:hover {
+    background-color:var(--coral)
+}
+
+
+.navbar-container:hover .About-Section:hover .Navbar-About-List {
+    display: block;
+}
+
+
+
+
+
+
+.Grid-Content {
+    display: grid;
+    position: absolute;
+    top:10%;
+    grid-template-columns: 700px 240px;
+    height:600px;
+   
+    
+}
+
+.Content-Background {
+    background-image: url('/images/corgismile.png');
+    background-repeat: none;
+    background-position: center center;
+    background-size: cover;
+    outline:none;
+    border:none;
+   
+
+  
+   
+}
+
+
+Form {
+ position: absolute;
+ top:10%;
+ left:82%;
+ background-image:linear-gradient(skyblue, white, black);
+ height: 80%;
+ width:60%;
+ border-radius: 10px;
+ box-shadow: 2px 2px 110px 2px skyblue inset;
+ 
+
+
+
+
+}
+
+
+
+.form-header {
+    display: flex;
+    position: absolute;
+    top:4%;
+    left:24%;
+    font-size: var(--fontSize);
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image:url(/images/corgispuppies.jpg);
+    background-clip:text;
+    --webkit-background-clip:text;
+    color:transparent;
+}
+
+
+.label-container {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    top:23%;
+    left: 15%;
+    gap:50px;
+    transition: 0.9s linear;
+}
+
+.label-container label {
+    transition: 0.9s linear;
+    color:black;
+    box-shadow: 0px 0px 0px 0px skyblue inset;
+}
+
+.User-input {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    gap:39px;
+    top:21%;
+    left: 43%;
+    transition: 0.9s linear;
+  
+   
+}
+
+.User-input input {
+    padding:0.6em 0em;
+    border:none;
+    outline: none;
+    border-radius: 10px;
+    text-align: center;
+    width:295px;
+    transition: 0.9s linear;
+}
+
+
+
+
+
+
+.username-err {
+    position: absolute;
+    visibility: hidden;
+    top:20%;
+    left: 45%;
+    color:var(--white);
+    background-color: var(--coral);
+    border-radius: 10px;
+    height:50px;
+    width: 165px;
+    font-size: 0.6rem;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+
+.username-err:after {
+    position: absolute;
+    content: "";
+    bottom:100%;
+    margin-left:-80px;
+    left:50%;
+    border-width:6px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+}
+
+.username-err-icon {
+    font-size: 0.9rem;
+    color:var(--white);
+    background-color:var(--coral)
+}
+
+.eye-icon {
+    position: absolute;
+    display: block;
+    top:32%;
+    left:93%;
+    font-size: 1rem;
+    z-index: -3;
+    
+}
+
+.eye-icon-open {
+    position: absolute;
+    display: none;
+    top:32%;
+    left:93%;
+    font-size: 1rem;
+    z-index: -3;
+   
+}
+
+
+
+
+.paswrd-error {
+    position:absolute;
+    visibility: hidden;
+    top:45%;
+    left: 45%;
+    color:var(--white);
+    background-color: var(--coral);
+    border-radius: 10px;
+    height:50px;
+    width: 165px;
+    font-size: 0.6rem;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+
+.paswrd-error:after {
+    position: absolute;
+    content: "";
+    bottom:100%;
+    margin-left:-80px;
+    left:56%;
+    border-width:10px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+}
+
+
+
+.passwrd-error-icon {
+    font-size: 0.9rem;
+    color:var(--white);
+    background-color:var(--coral)
+}
+
+.confirm-passwrd-error {
+    position: absolute;
+    visibility: hidden;
+    top:75%;
+    left: 45%;
+    color:var(--white);
+    background-color: var(--coral);
+    border-radius: 10px;
+    height:40px;
+    width: 130px;
+    font-size: 0.7rem;
+    font-family: Arial, Helvetica, sans-serif;
+    z-index:3
+
+}
+
+.confirm-passwrd-error:after {
+    position: absolute;
+    content: "";
+    bottom:100%;
+    margin-left:-80px;
+    left:56%;
+    border-width:8px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+}
+
+
+.confirm-passwrd-icon {
+    font-size: 0.9rem;
+    color:var(--white);
+    background-color:var(--coral)
+}
+
+.passwords-match {
+    position:absolute;
+    visibility: hidden;
+    top:75%;
+    left: 45%;
+    color:var(--white);
+    background-color: var(--coral);
+    border-radius: 10px;
+    height:30px;
+    width: 120px;
+    font-size: 0.6rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.password-match-icon {
+    color:var(--white);
+    background-color:var(--green);
+    font-size: 1.2rem;
+    
+}
+
+
+.email-error {
+    position: absolute;
+    visibility: hidden;
+    top:105%;
+    left: 45%;
+    color:var(--white);
+    background-color: var(--coral);
+    border-radius: 10px;
+    height:30px;
+    width: 120px;
+    font-size: 0.7rem;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+
+.email-error:after {
+    position:absolute;
+    content: "";
+    bottom:100%;
+    left:76%;
+    margin-left:-80px;
+    border-width:8px;
+    border-style: solid;
+    border-color: transparent transparent white transparent;
+
+}
+
+
+
+
+
+
+
+.User-Btn {
+    position: relative;
+    top:85%;
+    left:35%;
+    cursor: pointer;
+    
+}
+
+.btn {
+    border:none;
+    outline:none;
+    color:skyblue;
+    border-radius: 10px;
+    padding:0.9em 2em;
+    background:linear-gradient(coral, brown);
+    font-size: var(--fontSize);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    transition: 0.9s linear;
+}
+
+.btn:hover {
+    color:white;
+    background-color:white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*------------------------------------------------------POPUP SECTION -----------------------------------------------------------*/
+
+aside {
+    position: absolute;
+    visibility: hidden;
+    top:160px;
+    left: 500px;
+    background-color:purple;
+    font-weight: 600;
+    border-radius:10px;
+    height: 330px;
+    width: 410px;
+    border:3px solid white;
+    z-index: 3;
+  
+    
+}
+
+.Popup-Section {
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: center;
+    padding:1em 0em;
+    text-align: center;
+    z-index: 3;
+   
+}
+
+.Popup-Section h2 {
+    position: absolute;
+    top:6%;
+    color:lightgreen;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.Popup-Section p {
+    font-size: 0.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color:coral;
+    width:299px;
+}
+
+.Popup-Section p:nth-of-type(1) {
+    position: absolute;
+    top:25%;
+}
+
+.Popup-Section p:nth-of-type(2) {
+    position: absolute;
+    top:45%
+}
+
+.btn-popup {
+    position: absolute;
+    top:78%;
+    background-color:lightgreen;
+    border:none;
+    outline:none;
+    border-radius: 7px;
+    color:white;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    padding:0.8em 2em;
+    width:70%;
+    
+}
+
+.check-popup-icon {
+    position: absolute;
+    top:-11%;
+    font-size: 4.5rem;
+    color:lightgreen
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*------------------------------------------------------FOOTER--------------------------------------------------------------------*/
+
+
+.footer-sec {
+    position: relative;
+    top:85%;
+    left: 0%;
+    width: 100%;
+    height:36%;
+    background-image:linear-gradient(skyblue, white, whitesmoke, slategrey);
+    border-radius:3px;
+    
+}
+
+.footer-corgi {
+    position: relative;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    top:25%;
+    left:10%;
+    width: 40%;
+
+}
+
+
+
+.corgi-footer {
+    font-family: "Protest Revolution", sans-serif;
+    font-size: 2rem;
+    color:var(--coral)
+}
+
+
+
+.footer-left-side-text {
+    display: flex;
+    position: relative;
+    width:40%;
+    top:40%;
+    left: 10%;;
+}
+
+.footer-text {
+    font-family: "Protest Revolution", sans-serif;
+    font-size: 1rem;
+    color:var(--coral);
+    width: 180px;
+}
+
+
+.footer-corgi-image {
+    position: relative;
+    display: flex;
+    width:20%;
+    top:1%;
+    left: 1%;
+}
+
+
+.footer-corgi-image-wrapper {
+    background:url('/images/corgispuppies.jpg');
+    background-position:center;
+    background-size:cover;
+    width:110px;
+    height:110px;
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    top:-45%;
+    left: 40%;
+    position: relative;
+    width: 50%;
+
+}
+
+.footer-section a {
+    color:skyblue;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight:600
+}
+
+
+
+.footer-social-media {
+    display: flex;
+    flex-direction: column;
+    gap:10px 0px;
+    position:relative;
+    top:-40%;
+    left:48%;
+    height:6%;
+    width: 7%;
+
+}
+
+.footer-social-media a {
+    font-family: "Protest Revolution", sans-serif;
+    font-size: 1rem;
+    color:var(--coral);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.footer-social-media .social-media-icons {
+    color:skyblue;
+    font-size: 1.3rem;
+}
+
+.footer-social-media a:hover {
+    text-decoration: underline skyblue;
+}
+
+
+.footer-help-section {
+    display: flex;
+    flex-direction: column;
+    gap:20px 0px;
+    position: relative;
+    top:-43%;
+    left: 73%;
+    width:7%;
+    height:6%
+}
+
+.footer-help-section a {
+    text-decoration: none;
+    color:var(--coral);
+    font-family: "Protest Revolution", sans-serif;
+    font-size: 1rem;
+    width:210px;
+    cursor: pointer;
+}
+
+.footer-help-section a:hover {
+    text-decoration: underline skyblue;
+}
+
+.footer-help-section .help-icons {
+    font-size: 1rem;
+     color:skyblue;
+    font-weight:600;
+}
+
+
+
+.Corgi-Headlines-Section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    top:85%;
+    right:0%;
+    width: 100%;
+    height:5%;
+    background:linear-gradient(coral, white, skyblue, black);
+ 
+}
+
+
+
+
+.Corgi-Headlines-Section .corgi-header-discover {
+    font-size: 1.3rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color:var(--black);
+    text-align: center;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*---------------------------------------------MOBILE DEVICES----------------------------------------------------*/
+
+@media screen and (max-width:480px) {
+    .navbar-container {
+        display: none;
+        flex-direction: row;
+        width:100%;
+        justify-content: center;
+        align-items:center;
+    }
+
+    .navbar-container a {
+        width: 50vw;
+        font-size: 0.8rem;
+
+    }
+
+    .Navbar-About-List {
+       left: 25%;
+       width:160px;
+       height:100px
+    }
+
+    .Navbar-About-List a {
+        font-size:0.6rem
+    }
+
+
+    Form {
+        position: absolute;
+        top:-7%;
+        left: 0%;
+        height:410px;
+        width: 322px;
+        border-radius:none;
+    }
+
+    .form-header {
+        display: flex;
+        position: absolute;
+        top:7%;
+        left: 15%;
+        font-size: 0.7rem;
+        
+    }
+
+    .label-container {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top:24%;
+        left: 10%;
+        font-size: 0.7rem;
+
+    }
+
+    .User-input {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top:22%;
+        left: 45%;
+        gap:38px
+    }
+
+    .User-input input {
+        padding:0.3em 1em;
+        width:150px;
+    }
+
+    .Content-Background {
+        background:none
+    }
+
+    .User-Btn {
+        position: relative;
+        top:85%;
+        left: 32%;
+    }
+    .btn {
+        font-size: 0.7rem;
+    }
+
+    .footer-sec {
+        display: none;
+    }
+
+    .Corgi-Headlines-Section {
+        display: none;
+    }
+
+    .username-err {
+        position: absolute;
+        top:15%;
+        left: 0%;
+        font-size: 0.5rem;
+        height:45px;
+        
+    }
+
+    .eye-icon {
+        position: absolute;
+        left: 88%;
+    }
+
+ 
+
+
+    .confirm-passwrd-error {
+        position: absolute;
+        left: 10%;
+        height:30px;
+        font-size: 0.5rem;
+    }
+
+    .passwords-match {
+        position: absolute;
+        left: 10%;
+        height:25px;
+        font-size: 0.5rem;
+    }
+
+    .email-error {
+        position: absolute;
+        left: 10%;
+        height:25px;
+        font-size: 0.5rem;
+    }
+
+    aside {
+        visibility: visible;
+        height: 280px;
+        width: 299px;
+        top:15%;
+        left:3%
+    }
+
+    
+
+    body {
+        overflow-x: none;
+        margin:0
+    }
+}

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+  integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" 
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+  <link rel="stylesheet" href="/contactcss/contact.css">
+  <script defer  src="/jscontact/contact.js"></script>
+
+    <title>Contact Us</title>
+</head>
+
+
+<body onload="document.contactForm.contactName.focus()">
+
+
+
+    <navbar class="navbar-container" id="navbar-container">
+
+        <a href="/home.html" target="_self">Home</a>
+      <div class="About-Section" >
+        <a href="">About</a>
+        <div class="Navbar-About-List" id="About-List">
+            <a href="/about.html" target="_self">History of Corgis</a>
+             <a href="/important.html" target="_self">Why Corgis Are Important</a>
+        </div>
+      </div>
+       
+       
+        <a href="">Contact</a>
+      
+    
+    
+    </navbar>
+
+
+
+
+    <!-------------------------------------------------HEADER--------------------------------------------------------->
+
+
+
+    <form class="Contact-Form" id="contact-form" name="contactForm">
+
+        <div class="Header-Content-Container">
+            <h2>CONTACT US</h2>
+        </div>
+    
+
+        <div class="Contact-Flex-Container" id="contact-flex">
+            <label>Name</label>
+            <label>Phone:</label>
+            <label>Email:</label>
+            <label>Message:</label>
+
+
+        </div>
+
+        <div class="User-Flex-Container" id="user-flex">
+            <input onkeyup="contactUserName()"  type="text" class="contact-name" id="contact-name" name="contactName" autocomplete="off" placeholder="Name">
+            <span class="contact-name-err" id="contact-name-err" name="contact-name-err">Name Verified</span>
+            <input onkeyup="contactUserPhone()" type="tel" class="contact-phone" id="contact-phone" name="contact-phone" autocomplete="off" placeholder="Phone No">
+            <span class="contact-phone-err" id="contact-phone-err" name="contact-phone-err">Phone Number Verified</span>
+            <input onkeyup="contactUserEmail()" type="email" class="contact-email" id="contact-email" name="contact-email" autocomplete="off" placeholder="Email">
+            <span class="contact-email-err" id="contact-email-err" name="contact-email-err">Email Verified</span>
+            <textarea onkeyup="contactUserText()" class="contact-text" id="contact-text" maxlength="90" cols="50" rows="7" ></textarea>
+            <span class="contact-text-err" id="contact-text-err" name="contact-text-err"></span>
+
+            <button onclick="return formSubmission()" type="submit" class="btn-submit" id="btn-submit">SUBMIT</button>
+            
+        </div>
+
+
+    </form>
+    
+
+
+
+
+
+
+<script>
+
+
+        function contactUserName() {
+
+            let contactName = document.getElementById('contact-name').value;
+            let contactNameErr = document.getElementById('contact-name-err');
+
+            if(contactName.length == 0 || contactName.length <= 4) {
+            contactNameErr.style.visibility = 'hidden'
+            return false;
+            }
+
+
+            if(contactName.length >= 5) {
+                contactNameErr.style.visibility = 'visible';
+                return true;
+                }
+        }
+
+
+
+
+    function contactUserPhone() {
+
+            let contactPhone =   document.getElementById('contact-phone').value
+            let contactPhoneError = document.getElementById('contact-phone-err')
+
+             if(contactPhone.length < 0) {
+                return false;
+             }
+
+             if(!contactPhone.match(/^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/)) {
+                contactPhoneError.style.visibility = 'hidden'
+                return false;
+             }
+
+             if(contactPhone.match(/^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/)) {
+                contactPhoneError.style.visibility = 'visible'
+                return true
+             }
+
+             
+
+            
+        }
+
+
+        function contactUserEmail() {
+
+            let contactEmail = document.getElementById('contact-email').value;
+            let contactEmailError = document.getElementById('contact-email-err')
+
+            if(contactEmail.match(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)) {
+                contactEmailError.style.visibility = 'visible'
+                return true;
+            }
+
+
+        }
+
+
+
+
+
+        function contactUserText() {
+            let contactText = document.getElementById('contact-text').value;
+            let contactTextError = document.getElementById('contact-text-err')
+            let maxLength = 90;
+            if(contactText.length > 0 && contactText.length <= 90) {
+                return true;
+            }
+            
+
+        
+        }
+
+        function formSubmission() {
+           
+
+            if(!contactUserName() || !contactUserPhone() || !contactUserEmail() || !contactUserText()) {
+                alert('Please check your errors');
+                return false;
+            }
+
+            if(contactUserName() || contactUserPhone() || contactUserEmail() || contactUserText()) {
+                alert('Thank You for Your Submission. We will contact you within 10 minutes')
+                    return true;
+        }
+    }
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+    
+</body>
+</html>
